@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { regions } from "./lib/regions";
+import RegionCard from "./components/region-card";
 export default function Home() {
   return (
     <>
       <div className="h-full py-[clamp(28px,5cqi,56px)] px-[clamp(16px,4cqi,48px)] flex flex-col gap-5 max-w-240">
         <div className="text-(--color-accent-700) text-[11px] font-semibold uppercase tracking-widest">
-          A Field guide to 196 countries
+          A Field guide to 250 countries
         </div>
         <h1 className="text-[clamp(40px,7cqi,88px)] tracking-[-0.03em] m-0 text-balance font-(--font-heading-weight) leading-none">
           Every country has a story. Start with its neighbours.
@@ -45,7 +46,18 @@ export default function Home() {
           <span className="text-[13px] text-neutral-700">6 regions</span>
         </div>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(min(180px,45%),1fr))] gap-0.5 bg-(--color-divider) border-2 border-solid border-(--color-divider)">
-          {regions.map(() => )}
+          {regions.map((region) => (
+            <RegionCard
+              key={region.name}
+              name={region.name}
+              numberOfCountries={region.numberOfCountries}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="bg-(--color-accent) text-(--color-bg) py-[clamp(32px,6cqi,72px)] px-[clamp(16px,4cqi,48px)] ">
+        <div className="font-extrabold text-[clamp(32px,5.5cqi,72px)] leading-none tracking-[-0.03em] max-w-225 text-balance">
+          250 countries. 6 regions. Refreshed every day.
         </div>
       </div>
     </>
