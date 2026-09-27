@@ -3,7 +3,7 @@ import { regions } from "./lib/regions";
 import RegionCard from "./components/region-card";
 export default function Home() {
   return (
-    <>
+    <main>
       <div className="h-full py-[clamp(28px,5cqi,56px)] px-[clamp(16px,4cqi,48px)] flex flex-col gap-5 max-w-240">
         <div className="text-(--color-accent-700) text-[11px] font-semibold uppercase tracking-widest">
           A Field guide to 250 countries
@@ -60,6 +60,6 @@ export default function Home() {
           250 countries. 6 regions. Refreshed every day.
         </div>
       </div>
-    </>
+    </main>
   );
 }
