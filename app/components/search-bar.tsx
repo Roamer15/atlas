@@ -10,11 +10,12 @@ export default function SearchBar() {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        style="flex: none; color: var(--color-neutral-700);"
+        style={{flex: "none", color: "var(--color-neutral-700)"}}
       >
         <circle cx="11" cy="11" r="8"></circle>
         <path d="m21 21-4.3-4.3"></path>
       </svg>
+      <span className="text-[15px] text-neutral-600"></span>
     </div>
   );
 }
