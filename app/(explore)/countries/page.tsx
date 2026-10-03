@@ -1,5 +1,6 @@
 import SearchBar from "@/app/components/search-bar"
 import Image from "next/image"
+import ButtonTest from "@/app/components/button"
 
 const countries = [
     { code: "AR", name: "Argentina", capital: "Buenos Aires", pop: "45.7 million" },
@@ -19,6 +20,7 @@ export default function Page(){
             <div className="flex flex-wrap gap-3 items-end">
                 <div className="flex-[1_1_260px] flex flex-col gap-1.5">
                     <SearchBar />
+                    <ButtonTest></ButtonTest>
                 </div>
                 <div
                     style={{
